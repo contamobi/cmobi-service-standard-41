@@ -8,7 +8,7 @@
             "name": "Joubert RedRat",
             "email": "me+github@redrat.com.br"
         }
-    ],  
+    ],
     "require": {
         "php": "^7.1.3",
         "ext-ctype": "*",
@@ -63,6 +63,12 @@
         ],
         "post-update-cmd": [
             "@auto-scripts"
+        ],
+        "post-create-project-cmd": [
+            "@clear-folder-structure"
+        ],
+        "clear-folder-structure": [
+            "bash scripts/clear-folder-structure.bash"
         ],
         "tests": [
             "phpunit -c scripts/. --no-coverage"
